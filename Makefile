@@ -24,3 +24,7 @@ deploy-dry-run: k6
 
 deploy: k6
 	lambroll deploy
+
+statemachine.json:
+	jq -n env > env.json
+	jsonnet statemachine.jsonnet
