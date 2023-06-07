@@ -18,7 +18,7 @@ local env = import 'env.json';
             OutputPath: '$.Payload',
             Parameters: {
               'Payload.$': '$',
-              FunctionName: 'arn:aws:lambda:ap-northeast-1:%s:function:sfn-dist-k6:current' % env.AWS_ACCOUNT_ID,
+              FunctionName: 'arn:aws:lambda:%s:%s:function:sfn-dist-k6:current' % [env.AWS_REGION, env.AWS_ACCOUNT_ID],
             },
             Retry: [
               {

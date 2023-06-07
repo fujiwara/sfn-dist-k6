@@ -1,2 +1,3 @@
 .envrc
 k6
+env.json
