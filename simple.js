@@ -10,6 +10,7 @@ export function handleSummary(data) {
   return {
     '/tmp/summary.json': JSON.stringify({
       'checks': data.metrics.checks.values,
+      'http_req_duration': data.metrics.http_req_duration.values,
       'http_reqs': data.metrics.http_reqs.values,
     })
   }
