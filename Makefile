@@ -5,10 +5,11 @@ export AWS_ACCOUNT_ID ?= $(shell aws sts get-caller-identity --query Account --o
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  clean          to clean up"
-	@echo "  k6             to install k6"
-	@echo "  deploy-dry-run to deploy lambda function(dry-run)"
-	@echo "  deploy         to deploy lambda function"
+	@echo "  clean             to clean up"
+	@echo "  k6                to install k6"
+	@echo "  deploy-dry-run    to deploy lambda function(dry-run)"
+	@echo "  deploy            to deploy lambda function"
+	@echo "  statemachine.json to generate statemachine.json"
 
 clean:
 	rm -rf k6 k6-$(K6_VERSION)-linux-amd64*
